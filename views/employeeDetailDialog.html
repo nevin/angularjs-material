@@ -1,0 +1,35 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Employee Details</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <i md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></i>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                 <h2>{{selectedEmployee.firstName}}  {{selectedEmployee.lastName}}</h2>
+                 <h3>Designation: {{selectedEmployee.designation}}</h3>
+                 <h4>Employee ID: {{selectedEmployee.employeeID}}</h4>
+                 <p>Email: {{selectedEmployee.email}}</p>
+                 <p>Phone: {{selectedEmployee.phone}}</p>
+                 <p>Date Of Joining: {{selectedEmployee.doj | date:format:shortDate}}</p>
+                 <p>Address: {{selectedEmployee.address}}</p>
+                 <p>Age: {{selectedEmployee.age}}</p>
+                 <p>Dob: {{selectedEmployee.dob}}</p>
+                 <p>Gender: {{selectedEmployee.gender[0]}}</p>
+                 <p>Current Status: {{selectedEmployee.status[0].toUpperCase()}}</p>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">
+                Close
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

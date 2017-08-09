@@ -1,30 +1,38 @@
-<div flex-gt-sm="100" flex>
-    <div class="md-hue-3 title boxTitle">
-        <span>Employee List</span>
-    </div>
-    <md-content class="md-">
-        <md-card>
-            <md-list flex>
-            {{employeeData}}
-                <md-list-item ng-repeat="employee in employeeData" class="md-2-line" ng-repeat="phone in phones">
-                {{emplo}}
-                    <md-icon md-svg-icon="{{phone.options.icon}}" ng-if="phone.options.icon" ng-class="{'md-avatar-icon': phone.options.avatarIcon}"></md-icon>
-                    <img ng-src="{{phone.options.face}}?25" class="md-avatar" alt="{{phone.options.face}}"
-                         ng-if="phone.options.face"/>
-                    <div class="md-list-item-text" ng-class="{'md-offset': phone.options.offset }">
-                        <h3> {{ phone.number }} </h3>
-                        <p> {{ phone.type }} </p>
+<div layout="column" layout-gt-sm="row" flex-gt-sm="100" flex-gt-xs="100" layout-xs="row" style="height:95%" ng-cloak>
+    <md-card class="md-padding" layout-xs="column" layout="column" flex-gt-xs="100">
+        <md-toolbar md-scroll-shrink ng-if="true" style="background-color:#ae1b1b;">
+            <div class="md-toolbar-tools">
+                <h3 style="width: 90%">
+                    <span>Employee List</span>
+                </h3>
+                <a href="#!add" class="md-icon-button exportBtn" aria-label="Add New Employee"><i class="material-icons">add_circle_outline</i></a>
+                <button class="md-icon-button exportBtn"  ng-csv="employeeData" filename="{{csvFileName}}.csv" csv-header="prepareCSVHeaderData()" field-separator="{{fieldSeparator}}" decimal-separator="{{decimalSeparator}}"><i class="material-icons">get_app</i></button>
+            </div>
+
+        </md-toolbar>
+        <div></div>
+        <md-content class="mainContent" flex>
+            <md-list flex="">
+                <md-list-item ng-repeat="employee in employeeData " class="noright" ng-repeat="employeeitem in todos">
+                    <img src='../images/images-male.png' ng-show="employee.gender[0]=='Male'" class="md-avatar"
+                         alt="{{ employee.firstName }} {{employee.lastName}}"/>
+                    <img src='../images/images-female.png' ng-show="employee.gender[0]=='Female'" class="md-avatar"
+                         alt="{{ employee.firstName }} {{employee.lastName}}"/>
+                    <div class="md-list-item-text md-primary md-3-line primarysection" layout="column " ng-click="goToDetails(employee, $event)">
+                        <p class="title">{{ employee.firstName }} {{employee.lastName}}</p>
+                        <p class="designation">Designation: {{ employee.designation }}</p>
+                        <p class="employeeid">Employee ID#: {{ employee.employeeID }}</p>
                     </div>
-                    <md-button class="md-secondary md-icon-button" ng-click="doSecondaryAction($event)" ng-if="phone.options.actionIcon" aria-label="call">
-                        <md-icon md-svg-icon="{{phone.options.actionIcon}}"></md-icon>
-                    </md-button>
+                    <div class="md-secondary md-hue-3" aria-label="Edit">  <i class="material-icons" >create</i></div>
+                    <div class="md-secondary md-hue-3" aria-label="Delete Employee" ng-click="deleteEmployeeBtnAction(employee,$event)">  <i class="material-icons" >delete</i></div>
+                    <md-divider></md-divider>
                 </md-list-item>
+
             </md-list>
-        </md-card>
+        </md-content>
+    </md-card>
 
-    </md-content>
 </div>
-
 <md-divider></md-divider>
 
 </div>

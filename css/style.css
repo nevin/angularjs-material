@@ -37,12 +37,46 @@ md-toolbar.md-default-theme.md-hue-3:not(.md-menu-toolbar), md-toolbar.md-hue-3:
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     flex-direction: column;
-    margin: 8px 8px 0px 8px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
     min-height: 56px;
     line-height: 56px ;
     font-weight: bold;
     font-size:1hw;
+    background: #ae1b1b;
 
 }
 
+.toolbardemoScrollShrink .face {
+    width: 48px;
+    margin: 16px;
+    border-radius: 48px;
+    border: 1px solid #ddd; }
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 4px 0px;
+}
+.designation{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 4px 20px;
+}
+.employeeid{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 4px 20px;
+}
+.primarysection {
+    width: 70%;
+}
+.material-icons {
+
+    cursor: pointer;
+}
+.exportBtn{
+    border: none;
+    border-style: none;
+    border-radius:20px;
+    background-color: transparent;
+    color:white;
+}
