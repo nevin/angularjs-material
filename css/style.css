@@ -1,0 +1,48 @@
+.mainheader, md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar){
+    color: white;
+    background-color: #333333;
+}
+
+
+.sideNav{
+
+}
+
+.mainContent{
+
+}
+
+.title{
+    background: #ae1b1b;
+    box-shadow: none!important;
+    width: auto;
+    padding: 0 22px;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 0!important;
+    -webkit-appearance: none;
+}
+
+md-toolbar.md-default-theme.md-hue-3:not(.md-menu-toolbar), md-toolbar.md-hue-3:not(.md-menu-toolbar){
+    background-color: white;
+}
+
+.boxTitle{
+
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: 8px 8px 0px 8px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    min-height: 56px;
+    line-height: 56px ;
+    font-weight: bold;
+    font-size:1hw;
+
+}
+
